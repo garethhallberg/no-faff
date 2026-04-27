@@ -1,0 +1,17 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  recipe: CollectionEntry<'recipes'>;
+}
+
+const { recipe } = Astro.props;
+const { title, description, category, totalTime } = recipe.data;
+---
+<li class="recipe-card">
+  <a href={`/recipes/${recipe.id}/`}>
+    <div class="meta">{category}{totalTime ? ` · ${totalTime}` : ''}</div>
+    <h3>{title}</h3>
+    <p>{description}</p>
+  </a>
+</li>

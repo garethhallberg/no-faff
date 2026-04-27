@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RecipeCard from '../../components/RecipeCard.astro';
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+const recipes = (await getCollection('recipes')).sort(
+  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
+);
+
+const byCategory: Record<string, CollectionEntry<'recipes'>[]> = {};
+for (const recipe of recipes) {
+  (byCategory[recipe.data.category] ??= []).push(recipe);
+}
+
+const categories = Object.keys(byCategory).sort();
+---
+<BaseLayout
+  title="Recipes"
+  description="All vegetarian recipes on nofaffveg. Quick dinners, sides, salads, roasts."
+>
+  <div class="container">
+    <h1>Recipes</h1>
+    <p class="muted">Everything on the site. Vegetarian. Always practical.</p>
+
+    {categories.map((cat) => (
+      <section>
+        <h2>{cat}</h2>
+        <ul class="recipe-grid">
+          {byCategory[cat].map((recipe) => <RecipeCard recipe={recipe} />)}
+        </ul>
+      </section>
+    ))}
+  </div>
+</BaseLayout>

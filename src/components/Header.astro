@@ -1,0 +1,16 @@
+---
+const path = Astro.url.pathname;
+const isActive = (href: string) =>
+  href === '/' ? path === '/' : path.startsWith(href);
+---
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="site-title">no<em>faff</em>veg</a>
+    <nav class="site-nav">
+      <a href="/recipes/" class:list={[{ active: isActive('/recipes') }]}>Recipes</a>
+      <a href="/learn-to-cook/" class:list={[{ active: isActive('/learn-to-cook') }]}>Learn to Cook</a>
+      <a href="/everyday-eating/" class:list={[{ active: isActive('/everyday-eating') }]}>Everyday Eating</a>
+      <a href="/shop/" class:list={[{ active: isActive('/shop') }]}>Shop</a>
+    </nav>
+  </div>
+</header>
