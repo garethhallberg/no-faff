@@ -1,0 +1,20 @@
+---
+interface Props {
+  heading?: string;
+  blurb?: string;
+}
+
+const {
+  heading = 'Get 5 easy veg dinners — free',
+  blurb = 'Five recipes you can cook tonight. Sent once. No spam, no waffle.',
+} = Astro.props;
+---
+<aside class="email-box">
+  <h3>{heading}</h3>
+  <p>{blurb}</p>
+  <form action="#" method="post" onsubmit="return false;">
+    <input type="email" required placeholder="you@example.com" aria-label="Email address" />
+    <button type="submit">Send me the recipes</button>
+  </form>
+  <p class="footnote">Wire to Buttondown / MailerLite when ready. Form is static for now.</p>
+</aside>

@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EmailSignup from '../components/EmailSignup.astro';
+---
+<BaseLayout
+  title="Shop"
+  description="Cookbooks, kit, and pantry recommendations from nofaffveg."
+>
+  <div class="container">
+    <h1>Shop</h1>
+    <p class="muted">
+      A few honest recommendations. Affiliate links pay for the hosting.
+    </p>
+
+    <h2>Coming soon — the ebook</h2>
+    <div class="info-card">
+      <h3>20 Everyday Vegetarian Dinners You'll Actually Want to Eat</h3>
+      <p>
+        20 recipes. Grouped by 10-minute, 25-minute, and batch meals. One page each.
+        No life stories.
+      </p>
+      <p class="muted">
+        £7. Sold via Gumroad when ready. Want the early version?
+        <a href="#email">Join the list below.</a>
+      </p>
+    </div>
+
+    <h2>Kit I actually use</h2>
+    <p class="muted">
+      Affiliate links go here once IDs are sorted. For now, the shortlist:
+    </p>
+    <ul>
+      <li>An oven. The workhorse — roasts, parcels, peppers, fennel.</li>
+      <li>An air fryer. For when the oven is overkill and you want crisp in 12 minutes.</li>
+      <li>A heavy stainless saucepan and one cast-iron frying pan. That's it.</li>
+      <li>A grill pan with proper ridges (for the aubergine).</li>
+      <li>One sharp knife. Sharpened.</li>
+      <li>A microplane for garlic, ginger, lemon zest.</li>
+    </ul>
+
+    <h2>Pantry staples</h2>
+    <ul>
+      <li>Decent olive oil (cooking grade — the expensive stuff is for finishing).</li>
+      <li>Soy sauce. Red wine vinegar. Lemons.</li>
+      <li>Peanut butter (smooth, no sugar).</li>
+      <li>Dried chilli flakes. Cumin seeds. Fennel seeds.</li>
+      <li>Tinned tomatoes. Tinned chickpeas. Tinned cannellini beans.</li>
+    </ul>
+
+    <span id="email"></span>
+    <EmailSignup
+      heading="Be first in line for the ebook"
+      blurb="Join the list and get the ebook at launch — plus 5 free recipes now."
+    />
+  </div>
+</BaseLayout>

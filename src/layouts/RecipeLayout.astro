@@ -1,0 +1,43 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import EmailSignup from '../components/EmailSignup.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  recipe: CollectionEntry<'recipes'>;
+}
+
+const { recipe } = Astro.props;
+const { title, description, category, serves, prepTime, cookTime, totalTime, pubDate } = recipe.data;
+
+const dateStr = pubDate.toLocaleDateString('en-GB', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+<BaseLayout title={title} description={description}>
+  <article class="container">
+    <p class="recipe-meta">{category} · {dateStr}</p>
+    <h1>{title}</h1>
+    <p class="recipe-lede">{description}</p>
+
+    {(serves || prepTime || cookTime || totalTime) && (
+      <div class="recipe-stats">
+        {serves && <div>Serves<strong>{serves}</strong></div>}
+        {prepTime && <div>Prep<strong>{prepTime}</strong></div>}
+        {cookTime && <div>Cook<strong>{cookTime}</strong></div>}
+        {totalTime && <div>Total<strong>{totalTime}</strong></div>}
+      </div>
+    )}
+
+    <div class="recipe-content">
+      <slot />
+    </div>
+
+    <EmailSignup
+      heading="Like this kind of cooking?"
+      blurb="Get 5 more easy veg dinners straight to your inbox."
+    />
+  </article>
+</BaseLayout>

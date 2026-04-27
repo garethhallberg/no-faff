@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import RecipeCard from '../components/RecipeCard.astro';
+import EmailSignup from '../components/EmailSignup.astro';
+import { getCollection } from 'astro:content';
+
+const recipes = (await getCollection('recipes')).sort(
+  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
+);
+const latest = recipes.slice(0, 4);
+---
+<BaseLayout>
+  <section class="hero">
+    <h1>Easy veg food. No faff.</h1>
+    <p>Tasty vegetarian food with no nonsense.</p>
+  </section>
+
+  <div class="container">
+    <div class="category-pill-row">
+      <a href="/recipes/" class="category-pill">All recipes</a>
+      <a href="/everyday-eating/" class="category-pill">Everyday eating</a>
+      <a href="/learn-to-cook/" class="category-pill">Learn to cook</a>
+    </div>
+
+    <h2>Latest recipes</h2>
+    <ul class="recipe-grid">
+      {latest.map((recipe) => <RecipeCard recipe={recipe} />)}
+    </ul>
+
+    <p style="margin-top: 1.5rem;">
+      <a href="/recipes/">All recipes →</a>
+    </p>
+
+    <EmailSignup />
+
+    <h2>What this is</h2>
+    <p>
+      A small collection of vegetarian recipes that taste better than they have
+      any right to. No life stories. No 14 ingredients you don't have. Just food.
+    </p>
+    <p>
+      Most things here are simple, fast, and forgiving. The kind of cooking you
+      actually do on a Tuesday.
+    </p>
+  </div>
+</BaseLayout>

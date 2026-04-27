@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import RecipeCard from '../components/RecipeCard.astro';
+import { getCollection } from 'astro:content';
+
+const recipes = await getCollection('recipes');
+const everyday = recipes
+  .filter((r) => r.data.tags.includes('everyday'))
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+---
+<BaseLayout
+  title="Everyday Eating"
+  description="Recipes built around humble ingredients. Good food, quietly good value."
+>
+  <div class="container">
+    <h1>Everyday Eating</h1>
+    <p class="muted">
+      Recipes built around the things you probably already have. Cabbage, potatoes,
+      lentils, eggs, a tin of beans. Quietly good value, without making a thing of it.
+    </p>
+
+    <h2>A few principles</h2>
+    <ul>
+      <li>Buy the boring versions of basics. Shop-brand olive oil. Frozen veg. Tinned beans.</li>
+      <li>Cabbage, lentils, rice, eggs, potatoes. Build around these.</li>
+      <li>Spices punch above their weight. Use them.</li>
+      <li>Acid does the heavy lifting. Lemon, vinegar — these turn a flat dish into a real one.</li>
+      <li>Dried beans are roughly a third the price of tinned. Cook a big batch, freeze the rest.</li>
+    </ul>
+
+    {everyday.length > 0 && (
+      <>
+        <h2>Recipes</h2>
+        <ul class="recipe-grid">
+          {everyday.map((recipe) => <RecipeCard recipe={recipe} />)}
+        </ul>
+      </>
+    )}
+  </div>
+</BaseLayout>
