@@ -1,8 +1,8 @@
 ---
 title: "Easy Bloomer Bread"
-description: "Nothing beats home made bread"
+description: "Nothing beats home-made bread"
 pubDate: 2026-04-24
-category: "Roasts"
+category: "Baking"
 tags:
   - everyday
   - vegetarian
@@ -14,7 +14,7 @@ cookTime: "30 minutes"
 totalTime: "3 hours"
 ---
 
-Flour, water, yeast, salt. That's it. Once you've made your own bread you'll wonder why you ever stopped.
+Flour, water, yeast, salt, oil. That's it. Once you've made your own bread you'll wonder why you never did before.
 
 ## Ingredients
 
@@ -60,6 +60,7 @@ The long prove develops flavour. The hot oven gives you the crust.
 
 ## No-faff swaps
 
-- No strong white flour? Plain flour works but the texture won't be quite as chewy.
+- A bit short on strong white flour? String wholemeal flour can be mixed in with the white.
 - No fast-action yeast? Active dried yeast is fine — activate it in the warm water with a pinch of sugar for 10 minutes first.
 - Short on time? Slow-prove overnight in the fridge. Mix the dough in the evening, cover, leave it overnight, shape and bake in the morning.
+- Make a big round version by baking on a stewing pan.
