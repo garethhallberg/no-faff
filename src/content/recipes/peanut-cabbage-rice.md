@@ -69,8 +69,9 @@ Serve over basmati rice.
 
 - No fresh ginger? Use garlic instead.
 - No chilli? Use chilli flakes.
-- No cabbage? Use cauliflower, mushrooms, broccoli, or whatever needs using.
+- No cabbage? Use cauliflower, mushrooms, broccoli, or whatever needs using. If uisng cauliflower AND cabbage put the cauliflower in five minutes before the cabbage.
 - Want protein? Add tofu, haricot beans, chickpeas, or edamame.
+- Swap in brown onions if that's what you have.
 
 ## Why this works
 

@@ -33,7 +33,9 @@ For the dressing:
 
 ### 1. Slice and oil
 
-Slice the aubergine into 6 thick rounds. Put them in a bowl with a generous glug of olive oil and the sliced garlic. Turn them over so they're well coated.
+Put the olive oil and finely sliced garlic in a small bowl. Let it sit for 10 minutes while you slice the aubergine into 6 thick rounds.
+
+Brush or rub the aubergine with the garlic-infused oil, but don’t transfer the garlic slices onto the pan as they'll burn and become bitter.
 
 A pinch of salt.
 
@@ -49,7 +51,7 @@ A few minutes each side, until you've got proper dark grill marks and the auberg
 
 ### 4. Dress
 
-Whisk the lemon juice, olive oil and dill together with a pinch of salt.
+Whisk the lemon juice, olive oil, the garlic from earlier and dill together with a pinch of salt.
 
 Pile the warm aubergine onto a plate. Spoon the dressing over.
 
