@@ -1,8 +1,8 @@
 ---
 title: "Tomato sauce - Marcella Hazan style"
-description: "Just the best pomodoro sauce you can make. Simplicity at its finest"
+description: "Just the best pomodoro sauce you can make. Simplicity at its finest."
 pubDate: 2026-04-30
-category: "Pasta sauce"
+category: "Sauces"
 tags:
   - everyday
   - vegetarian
