@@ -46,7 +46,7 @@ Mix it all up at the table, or keep it neat for the Instagram shot. Either way, 
 ## No-faff notes
 
 - No edamame? Frozen peas or broad beans work in a pinch, though the protein hit won't be as high.
-- Use [lemony green lentils](/recipes/lemony-lentils) if you have them already made — the cornichons and lemon will cut through the richness of the cottage cheese.
-- Any coleslaw works — [simple](simple-coleslaw), [sesame](sesame-coleslaw), or [red cabbage](red-cabbage-coleslaw).
+- Use [lemony green lentils](/recipes/lemony-lentils/) if you have them already made — the cornichons and lemon will cut through the richness of the cottage cheese.
+- Any coleslaw works — [simple](/recipes/simple-coleslaw/), [sesame](/recipes/sesame-coleslaw/), or [red cabbage](/recipes/red-cabbage-coleslaw/).
 - Add avocado if you're feeling fancy and have the budget.
 - This keeps well for a day in the fridge, though the coleslaw may soften slightly.
