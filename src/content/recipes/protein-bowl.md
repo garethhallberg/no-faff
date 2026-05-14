@@ -16,7 +16,7 @@ cookTime: "2 minutes"
 totalTime: "12 minutes"
 ---
 
-This is the kind of thing a café would call a Vegetarian Protein Bowl and charge £9.99 for. It takes ten minutes, costs less than £2, and tastes better than theirs.
+This is the kind of thing a café would call a Vegetarian Protein Bowl and charge £9.99 for. It takes ten minutes, costs less than £1.50 per serving, and tastes better than theirs.
 
 ## Ingredients
 
@@ -35,17 +35,13 @@ This is the kind of thing a café would call a Vegetarian Protein Bowl and charg
 
 Boil the frozen edamame beans for 2 minutes in salted water. Drain, then tip them back into the pan with the butter, a pinch of salt and a good grind of black pepper. Toss to coat.
 
-### 2. Warm the lentils
+### 2. Assemble
 
-Tip the drained lentils into a small pan with the sliced cornichons and warm them through gently. No need to add anything else — the lentils and cornichons will take on the dressing from the coleslaw and the other ingredients.
+Divide the warm edamame between two bowls. Add the cottage cheese, sun-dried tomatoes, drained lentils and sliced cornichons, and a good scoop of coleslaw.
 
-### 3. Assemble
+### 3. Serve
 
-Divide the warm edamame between two bowls. Add the cottage cheese, sun-dried tomatoes, warm lentils and cornichons, and a good scoop of coleslaw.
-
-### 4. Serve
-
-Mix it all up at the table, or keep it neat for the Instagram shot. Either way, eat it while the edamame and lentils are still warm.
+Mix it all up at the table, or keep it neat for the Instagram shot. Either way, eat it while the edamame is still warm.
 
 ## No-faff notes
 
