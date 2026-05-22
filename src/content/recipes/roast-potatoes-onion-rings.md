@@ -9,7 +9,7 @@ tags:
   - onion
   - rosemary
   - roast
-serves: "2–3"
+serves: 3
 prepTime: "15 minutes"
 cookTime: "1 hour 30 minutes"
 totalTime: "1 hour 40 minutes"
