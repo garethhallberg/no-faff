@@ -1,0 +1,161 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Search"
+  description="Search vegetarian recipes on nofaffveg."
+>
+  <div class="container search-page" data-pagefind-ignore>
+    <h1>Search</h1>
+    <p class="muted">Find recipes by ingredient, dish, category or mood.</p>
+
+    <form class="search-form" role="search">
+      <label class="sr-only" for="recipe-search">Search recipes</label>
+      <input
+        id="recipe-search"
+        class="search-input"
+        type="search"
+        name="q"
+        placeholder="Try cabbage, tofu, gravy..."
+        autocomplete="off"
+      />
+    </form>
+
+    <p class="search-status" aria-live="polite">Type to search the recipes.</p>
+    <ol class="search-results" aria-label="Search results"></ol>
+
+    <noscript>
+      <p class="muted">Search needs JavaScript. The full recipe list is still available on the <a href="/recipes/">recipes page</a>.</p>
+    </noscript>
+  </div>
+
+  <script>
+    const input = document.querySelector<HTMLInputElement>('#recipe-search');
+    const status = document.querySelector<HTMLElement>('.search-status');
+    const resultsList = document.querySelector<HTMLOListElement>('.search-results');
+
+    type PagefindResultData = {
+      url: string;
+      meta?: {
+        title?: string;
+      };
+      excerpt?: string;
+    };
+
+    type PagefindResult = {
+      data: () => Promise<PagefindResultData>;
+    };
+
+    type PagefindModule = {
+      search: (query: string) => Promise<{ results: PagefindResult[] }>;
+    };
+
+    let pagefindPromise: Promise<PagefindModule> | undefined;
+    let latestSearch = 0;
+    const runtimeImport = new Function('path', 'return import(path)') as (
+      path: string,
+    ) => Promise<PagefindModule>;
+
+    const recipePath = (url: string) => {
+      const path = new URL(url, window.location.origin).pathname;
+      return path.startsWith('/recipes/') && path !== '/recipes/';
+    };
+
+    const setStatus = (message: string) => {
+      if (status) status.textContent = message;
+    };
+
+    const clearResults = () => {
+      if (resultsList) resultsList.replaceChildren();
+    };
+
+    const loadPagefind = async () => {
+      pagefindPromise ??= runtimeImport('/pagefind/pagefind.js');
+      return pagefindPromise;
+    };
+
+    const renderResults = (results: PagefindResultData[]) => {
+      if (!resultsList) return;
+
+      clearResults();
+
+      for (const result of results) {
+        const item = document.createElement('li');
+        item.className = 'search-result';
+
+        const link = document.createElement('a');
+        link.href = result.url;
+
+        const title = document.createElement('h2');
+        title.textContent = result.meta?.title || 'Untitled recipe';
+
+        const excerpt = document.createElement('p');
+        excerpt.innerHTML = result.excerpt || '';
+
+        link.append(title, excerpt);
+        item.append(link);
+        resultsList.append(item);
+      }
+    };
+
+    const runSearch = async () => {
+      if (!input) return;
+
+      const query = input.value.trim();
+      const searchId = ++latestSearch;
+
+      const url = new URL(window.location.href);
+      if (query) {
+        url.searchParams.set('q', query);
+      } else {
+        url.searchParams.delete('q');
+      }
+      window.history.replaceState({}, '', url);
+
+      if (!query) {
+        clearResults();
+        setStatus('Type to search the recipes.');
+        return;
+      }
+
+      setStatus('Searching...');
+
+      try {
+        const pagefind = await loadPagefind();
+        const search = await pagefind.search(query);
+        const data = await Promise.all(search.results.map((result) => result.data()));
+        const recipeResults = data.filter((result) => recipePath(result.url));
+
+        if (searchId !== latestSearch) return;
+
+        renderResults(recipeResults);
+        setStatus(
+          recipeResults.length === 1
+            ? '1 recipe found.'
+            : `${recipeResults.length} recipes found.`,
+        );
+      } catch {
+        clearResults();
+        setStatus('Search is available after running a production build.');
+      }
+    };
+
+    const debounce = <Args extends unknown[]>(
+      callback: (...args: Args) => void,
+      delay: number,
+    ) => {
+      let timeout: number | undefined;
+      return (...args: Args) => {
+        window.clearTimeout(timeout);
+        timeout = window.setTimeout(() => callback(...args), delay);
+      };
+    };
+
+    if (input) {
+      const params = new URLSearchParams(window.location.search);
+      input.value = params.get('q') || '';
+      input.addEventListener('input', debounce(runSearch, 150));
+      if (input.value.trim()) runSearch();
+    }
+  </script>
+</BaseLayout>

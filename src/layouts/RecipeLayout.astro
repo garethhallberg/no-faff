@@ -17,7 +17,7 @@ const dateStr = pubDate.toLocaleDateString('en-GB', {
 });
 ---
 <BaseLayout title={title} description={description}>
-  <article class="container">
+  <article class="container" data-pagefind-body>
     <p class="recipe-meta">{category} · {dateStr}</p>
     <h1>{title}</h1>
     <p class="recipe-lede">{description}</p>
