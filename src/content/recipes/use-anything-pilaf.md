@@ -85,7 +85,7 @@ Serve with a spoonful of yoghurt on the side.
 
 ## What works well
 
-- Peas, sweetcorn or spinach: stir through at the end so they stay bright.
+- Sweetcorn or spinach: stir through at the end so they stay bright.
 - Carrot, pepper, courgette or small broccoli pieces: cook with the onion before adding the rice.
 - Mushrooms: fry until their water has evaporated before the rice goes in.
 - Cooked chickpeas, lentils or beans: fold through at the end to warm them up.
@@ -97,7 +97,7 @@ The rice absorbs the flavoured cooking liquid while the vegetables steam gently 
 ## No-faff swaps
 
 - No basmati? Long-grain rice works; check the packet timing if it usually needs longer.
-- No fresh vegetables? Frozen peas, sweetcorn or spinach are ideal here.
+- No fresh vegetables? Frozen sweetcorn or spinach are ideal here.
 - No nuts? Use pumpkin seeds, sunflower seeds or sesame seeds.
 - No yoghurt? Finish with lemon and olive oil instead.
 - Want it richer? Add a fried egg, halloumi or crispy tofu on top.

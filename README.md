@@ -11,6 +11,15 @@ npm install
 npm run dev
 ```
 
+## Production build
+
+```bash
+npm run build
+npm run preview
+```
+
+The built site is written to `dist/`.
+
 ## Structure
 
 Recipes live in `src/content/recipes/` as Markdown files. Each recipe has frontmatter for title, description, category, tags, timings, and serves.
