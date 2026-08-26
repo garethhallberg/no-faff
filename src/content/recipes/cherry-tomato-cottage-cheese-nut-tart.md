@@ -18,7 +18,7 @@ totalTime: "1 hour 15 minutes"
 
 Roast tomatoes. Mix filling. Assemble raw pastry. Bake once.
 
-This is much more sensible than making a tart feel like a project. The cottage cheese turns into a soft, savoury filling, the tomatoes concentrate first, and the almond-cashew finish gives the whole thing crunch.
+The cottage cheese turns into a soft, savoury filling, the tomatoes concentrate first, and the almond-cashew finish gives the whole thing crunch.
 
 ## Ingredients
 
@@ -42,7 +42,9 @@ This is much more sensible than making a tart feel like a project. The cottage c
 
 Heat the oven to 200C, or 180C fan.
 
-Put the cherry tomatoes cut-side up on a baking tray. Add the spring onions alongside them.
+Line a baking tray with baking paper.
+
+Put the cherry tomatoes cut-side up on the tray. Add the spring onions alongside them.
 
 Drizzle lightly with olive oil, then season with salt and black pepper.
 
@@ -52,7 +54,7 @@ Roast for 15-20 minutes, until the tomatoes have softened and started to concent
 
 Mix the chopped chilli with 1 1/2 tablespoons olive oil, the garlic and a little pinch of salt.
 
-That is it. This is not proper chilli crisp. It is just the chilli-garlic-oil layer that sits under the cheese and makes the tart better.
+This is not a proper chilli crisp. It is just the chilli-garlic-oil layer that sits under the cheese and makes the tart better and it works.
 
 ### 3. Toast the nuts
 
@@ -74,7 +76,9 @@ Add plenty of black pepper and a small pinch of salt. Go easy: the Parmesan is a
 
 Turn the oven down to 180C, or 170C fan.
 
-Line your tart tin with the pastry. Press it into the edges, then trim or fold whatever needs sorting.
+Line your tart tin with the pastry. If the pastry comes rolled in baking paper, use that underneath: it makes the tart easier to lift out later and saves scrubbing the tin.
+
+Press the pastry into the edges, then trim or fold whatever needs sorting.
 
 Prick the base a few times with a fork.
 
@@ -113,6 +117,7 @@ The chilli-garlic oil underneath is the quiet move. It seasons the base of the t
 ## No-faff notes
 
 - No pre-baking. The filling is not wet enough to justify the extra faff.
+- Baking paper under the pastry is useful if your tin is not loose-bottomed, or if you want to lift the tart out cleanly.
 - Drain the cottage cheese if it looks watery.
 - Use the nuts in two places: some inside the filling, some on top after baking.
 - Let the tart sit before cutting. Ten minutes makes a big difference.
